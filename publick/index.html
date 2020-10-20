@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Socket io chat</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src='socket.io/socket.io.js'></script>
+    <script src="socket.io/socket.io.js"></script>
     <script>
         var socket = io();
     </script>
-    <h1>
-        You connected
-    </h1>
+    <input type="text" placeholder="Your_Name" id="name_input">
+    <div id="messages">
+
+
+    </div>
+    <div class="send_panel">
+        <input type="text" id="input_message" placeholder="Enter your message">
+        <input type="button" id="button_send" value="Send" onclick="sendMessage(name_input.value, input_message.value)">
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
